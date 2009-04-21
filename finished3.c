@@ -1,4 +1,4 @@
-/*
+/**
  * (C) Copyright 2009
  * Author: xiangjun liu <liuxiangj@gmail.com>
  *
