@@ -22,15 +22,16 @@ LD = ld
 CFLAGS = -g -O3 -Wall -I.
 
 TARGETS = work
+OBJS = finished.o
 
 all: $(TARGETS)
-work: 
-        $(CC) $(LDFLAGS) $(OBJS) -o $@
+work: $(OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) -o $@
 
 .c.o: 
-        $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean::
-        $(RM) $(TARGETS) *.o *.d 
+	$(RM) $(TARGETS) *.o *.d 
 
 -include $(wildcard *.d) dummy  
